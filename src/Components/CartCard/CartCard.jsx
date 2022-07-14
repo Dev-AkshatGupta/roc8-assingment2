@@ -21,9 +21,12 @@ const CartCard = ({product}) => {
           <h2 className="text-gray-900 title-font font-medium">
             {product.title}
           </h2>
+          <p className="text-gray-500">₹ {product.price}</p>
           <p className="text-gray-500 flex justify-evenly">
             <button
-              className={`text-2xl ${product.quantity<=1?"":""}`}
+              className={`text-2xl ${
+                product.quantity <= 1 ? "cursor-not-allowed" : ""
+              }`}
               onClick={() => {
                 dispatch(decreaseQuantity(product));
               }}

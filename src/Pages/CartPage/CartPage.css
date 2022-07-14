@@ -1,0 +1,5 @@
+.cart-page__container{
+    display: grid;
+    grid-template-areas: "... item-display item-display ... price-summary ";
+    grid-template-rows: 8fr 2fr;
+}
